@@ -1,0 +1,265 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --dark-color: #2d3436;
+    --light-color: #f5f6fa;
+    --success-color: #00b894;
+    --warning-color: #fdcb6e;
+    --danger-color: #d63031;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 10px;
+}
+
+header h1 i {
+    margin-right: 10px; 
+}
+/* Naitik Pawar Wevloper Copy right*/
+
+header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.generator-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-section, .output-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;/* Naitik Pawar Wevloper Copy right*/
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="color"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+/* Naitik Pawar Wevloper Copy right*/
+.design-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.design-option {
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.design-option:hover {
+    transform: translateY(-5px);
+}/* Naitik Pawar Wevloper Copy right*/
+
+.design-option.active {
+    position: relative;
+}
+/* Naitik Pawar Wevloper Copy right*/
+.design-option.active::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--success-color);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;/* Naitik Pawar Wevloper Copy right*/
+}
+
+.design-preview {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: #f5f6fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.design-preview::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: var(--dark-color);
+}
+/* Naitik Pawar Wevloper Copy right*/
+/* Design styles */
+.design-preview.default::before {
+    border-radius: 0;
+}
+
+.design-preview.dots::before {
+    border-radius: 50%;
+}
+
+.design-preview.rounded::before {
+    border-radius: 15px;
+}
+
+.design-preview.gradient::before {/* Naitik Pawar Wevloper Copy right*/
+    background: linear-gradient(45deg, var(--primary-color), var(--danger-color));
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;/* Naitik Pawar Wevloper Copy right*/
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #5649c0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.btn.secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn.secondary:hover {/* Naitik Pawar Wevloper Copy right*/
+    background-color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.qr-container {
+    background-color: #f5f6fa;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;/* Naitik Pawar Wevloper Copy right*/
+    min-height: 400px;
+    position: relative;
+    border: 2px dashed #ddd;
+}
+/* Naitik Pawar Wevloper Copy right*/
+#qr-canvas {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder {
+    text-align: center;
+    color: #999;
+}
+
+.placeholder i {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.placeholder p {
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    color: #666;
+}
+
+footer i {
+    color: var(--danger-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .generator-container {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}

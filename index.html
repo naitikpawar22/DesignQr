@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignQR - Custom QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-qrcode"></i> DesignQR</h1>
+            <p>Create beautiful, customizable QR codes in seconds</p>
+        </header>
+
+        <main>
+            <div class="generator-container">
+                <div class="input-section">
+                    <div class="form-group">
+                        <label for="url-input">Enter URL:</label>
+                        <input type="text" id="url-input" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qr-size">QR Code Size:</label>
+                        <select id="qr-size">
+                            <option value="200">200x200</option>
+                            <option value="300" selected>300x300</option>
+                            <option value="400">400x400</option>
+                            <option value="500">500x500</option>
+                        </select>
+                    </div>
+<!--Naitik Pawar Wevloper Copy right-->
+                    <div class="form-group">
+                        <label for="qr-color">Color:</label>
+                        <input type="color" id="qr-color" value="#000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bg-color">Background:</label>
+                        <input type="color" id="bg-color" value="#ffffff">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Design Style:</label>
+                        <div class="design-options">
+                            <div class="design-option" data-style="default">
+                                <div class="design-preview default"></div>
+                                <span>Default</span>
+                            </div>
+                            <div class="design-option" data-style="dots">
+                                <div class="design-preview dots"></div>
+                                <span>Dots</span>
+                            </div>
+                            <div class="design-option" data-style="rounded">
+                                <div class="design-preview rounded"></div>
+                                <span>Rounded</span>
+                            </div>
+                            <div class="design-option" data-style="gradient">
+                                <div class="design-preview gradient"></div>
+                                <span>Gradient</span>
+                            </div>
+                        </div>
+                    </div><!--Naitik Pawar Wevloper Copy right-->
+
+                    <button id="generate-btn" class="btn">Generate QR Code</button>
+                    <button id="download-btn" class="btn secondary" disabled>Download QR Code</button>
+                </div>
+
+                <div class="output-section">
+                    <div class="qr-container">
+                        <canvas id="qr-canvas"></canvas>
+                        <div class="placeholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>Your custom QR code will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 ~ Naitik Pawar| Made with <i class="fas fa-heart"></i> for the web</p>
+        </footer>
+    </div>
+
+    <!-- Using the qrcode-generator library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html><!--Naitik Pawar Wevloper Copy right-->
